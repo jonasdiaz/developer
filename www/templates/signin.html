@@ -1,0 +1,48 @@
+<ion-view>
+  <ion-header-bar class="bar-dark">
+    <a class="button button-clear button-icon icon ion-arrow-left-c" href="#/login"></a>
+    <h1 class="title">CREAR CUENTA</h1>
+    <!--<a class="button button-icon ion-ios-bell"></a>-->
+  </ion-header-bar>
+  <ion-content scroll="false">
+  <section class = "home-container">
+
+        <div class = "row header">
+          <div class = "col text-center img-back">
+          </div>
+        </div>
+
+        <div class = "icon-row spacer-sm">
+          <div class = "col text-center">
+            <input type="text" placeholder="Nombres" ng-model="signin.data.nombre">
+          </div>
+        </div>
+
+        <div class = "icon-row spacer-sm">
+          <div class = "col text-center">
+            <input type="number" placeholder="CUIT" ng-model="signin.data.cuit">
+          </div>
+        </div>
+
+        <div class = "icon-row">
+          <div class = "col text-center">
+            <input type="email" placeholder="Correo Electrónico" ng-model="signin.data.email">
+          </div>
+        </div>
+
+        <div class = "icon-row">
+          <div class = "col text-center">
+            <input type="password" placeholder="Contraseña" ng-model="signin.data.password">
+          </div>
+        </div>
+
+        <div class = "row">
+          <div class = "col text-center">
+            <button class="button button-dark" ng-click="signin.grabar()">GUARDAR</button>
+          </div>
+        </div>
+
+      </section>
+
+  </ion-content>
+</ion-view>

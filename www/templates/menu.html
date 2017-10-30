@@ -1,0 +1,48 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-energized">
+      <!--<ion-nav-back-button>
+      </ion-nav-back-button>-->
+
+      <ion-nav-buttons side="left">
+        <a class="button button-clear button-icon button-clear icon ion-navicon" menu-toggle="left">
+        </a>
+        <!--<a class="button button-icon ion-navicon-round text-icon-yellow"></a>-->
+        <h1 class="title ure"><img class="title-image" src="img/logo.png" width="123" height="23" /></h1>
+        <a class="button button-clear button-icon icon ion-ios-bell" href="#/notify"></a>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+  <ion-side-menu side="left">
+    <ion-header-bar class="bar-stable noback">
+      <h1 class="title white">OPCIONES</h1>
+    </ion-header-bar>
+    <ion-content has-header="true">
+      <ul class="list">
+        <li class="item transp clear" menu-close ng-click="login()" nav-clear>
+          <img src="img/perfil.png" width="30" />Perfil
+        </li>
+        <li class="item item-toggle transp clear">
+          <img src="img/notificacion.png" width="30" />
+           Notificaciones
+           <label class="toggle toggle-dark">
+             <input type="checkbox">
+             <div class="track">
+               <div class="handle"></div>
+             </div>
+           </label>
+        </li>
+        <li class="item transp clear" menu-close href="#/app/browse">
+          <img src="img/prender.png" width="30" />Cerrar Sesion
+        </li>
+      </ul>
+    </ion-content>
+    <ion-footer-bar class="noback">
+      <a class="button button-clear button-icon icon ion-social-twitter-outline" href="#"></a>
+      <a class="button button-clear button-icon icon ion-social-instagram-outline" href="#"></a>
+      <a class="button button-clear button-icon icon ion-social-linkedin-outline" href="#"></a>
+      <a class="button button-clear button-icon icon ion-social-facebook-outline" href="#"></a>
+    </ion-footer-bar>
+  </ion-side-menu>
+</ion-side-menus>

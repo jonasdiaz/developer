@@ -1,0 +1,39 @@
+<ion-content has-header="true">
+  <div class="home-content">
+    <div class="row">
+      <div class="col text-center">
+        <div class="update-box">
+          Actualizaciones
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-center">
+        <div class="algo">
+          Narnia
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-center">
+        <ion-slides  options="{loop: false,effect: 'fade',speed: 500}" slider="data.slider">
+          <ion-slide-page>
+            <div class="box blue"><h1>BLUE</h1></div>
+          </ion-slide-page>
+          <ion-slide-page>
+            <div class="box yellow"><h1>YELLOW</h1></div>
+          </ion-slide-page>
+          <ion-slide-page>
+            <div class="box pink"><h1>PINK</h1></div>
+          </ion-slide-page>
+        </ion-slides>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div id="progressbarlabel">50%</div>
+      <progress id="progressbar" max="100" value="50"> </progress>
+    </div>
+  </div>
+</ion-content>

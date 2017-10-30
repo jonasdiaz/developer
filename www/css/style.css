@@ -1,0 +1,85 @@
+@font-face {
+    font-family: FontInbricksBody;
+    src: url('../fonts/Roboto_Condensed/RobotoCondensed-Light.ttf');
+}
+@font-face {
+    font-family: FontInbricksTitle;
+    src: url('../fonts/Roboto_Condensed/RobotoCondensed-Bold.ttf');
+}
+
+body{
+  font-family: FontInbricksBody !important;
+}
+
+input{
+  font-family: FontInbricksBody !important;
+}
+
+input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+    padding-left: 10px;
+    height: 45px;
+    color: #333;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.title{
+  font-family: FontInbricksTitle !important;
+}
+
+.uranga{
+  background-size: cover;
+  background-position: 100% 100%;
+  height: 300px;
+}
+
+ion-side-menu{
+  background-image: url('../img/menu.jpg');
+    background-repeat: repeat;
+    background-color: transparent;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+}
+
+.noback{
+  background: transparent !important;
+}
+
+.home-content{
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+}
+
+.separator{
+  background: #444;
+  color: #FFF;
+  height: 50px;
+  text-align: center;
+  width: 100%
+}
+
+.project-box{
+  /*margin: 100px 0px 0px 0px;*/
+  background: rgb(247, 172, 58);
+  height: 160px;
+  margin: 3px 3px 3px 3px;
+}
+
+.project-box-content > img{
+  width: 100%;
+  background-size: 100% 100%;
+}
+
+.project-box-title{
+  color: #333;
+}
+
+.update-box{
+  background: #333;
+  color: #FFF;
+  height: 65px;
+}
