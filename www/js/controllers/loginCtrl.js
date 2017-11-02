@@ -2,15 +2,19 @@
 
   'use strict';
 
-  function LoginCtrl(User){
+  function LoginCtrl($state, Users){
 
     var vm = this;
 
     vm.data = {};
 
     vm.login = function(){
-      User.login(vm.data).then(function(res){
+      Users.login(vm.data).then(function(res){
         console.log(res);
+        window.localStorage.setItem('user', JSON.stringify(res.data));
+        window.localStorage.setItem('keyacces', res.data.access_token);
+        Users.Data = res.data;
+        $state.go('app.home');
       }, function(err){
 
       });

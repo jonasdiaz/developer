@@ -26,7 +26,12 @@
       url: '/login',
       templateUrl: 'templates/login.html',
       controller: 'LoginCtrl',
-      controllerAs: 'login'
+      controllerAs: 'login',
+      resolve: {
+        check: function(Users){
+          Users.isLogged();
+        }
+      }
     })
 
     .state('signin', {
@@ -52,7 +57,9 @@
       url: '/home',
       views: {
         'menuContent': {
-          templateUrl: "templates/home.html"
+          templateUrl: "templates/home.html",
+          controller: 'HomeCtrl',
+          controllerAs: 'home'
         }
       }
     })
@@ -69,7 +76,7 @@
   }
 
   angular
-        .module('developers_inbricks', ['ionic', 'ionic-material',
+        .module('developers_inbricks', ['ionic',
           'developers_inbricks.controllers', 'developers_inbricks.services'])
         .config(config)
         .run(run);

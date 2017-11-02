@@ -2,7 +2,7 @@
 
   'use strict';
 
-  function Developers($http, BASE_URL, User){
+  function Developers($http, BASE_URL, Users){
     return {
       get: getProjects,
       save: saveDevelopers,
@@ -16,7 +16,7 @@
           desarrollador_id: desarrollador_id
         },
         headers: {
-          'x-access-token': User.data.access_token
+          'x-access-token': window.localStorage.getItem('keyacces')
         }
       });
     }
@@ -24,7 +24,7 @@
     function saveDevelopers(data){
       return $http.post(BASE_URL.base + '/desarrolladores', data, {
         headers: {
-          'x-access-token': User.data.access_token
+          'x-access-token': window.localStorage.getItem('keyacces')
         }
       });
     }

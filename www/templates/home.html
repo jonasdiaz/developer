@@ -1,114 +1,65 @@
-<ion-content class="has-header padding">
-  <div class="home-content">
-    <div class="row">
-      <div class="col text-center">
-        <div class="serach-box">
-          <div class="list list-inset">
-            <label class="item item-input">
-              <i class="icon ion-search placeholder-icon"></i>
-              <input type="text" placeholder="Search">
-            </label>
+<ion-view scroll="true">
+  <ion-content scroll="true">
+
+      <div class="row cabeza-de-maceta">
+
+          <div class="col col-33 text-center invest">
+            Proyectos <br>
+            {{home.projects.items.length}}
           </div>
-        </div>
+
+          <div class="col col-33 text-center centrado">
+            <img src="img/no-image.png" >
+          </div>
+
+          <div class="col col-33 text-center display-name">
+            {{home.user_data.nombre}}
+          </div>
+
       </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <div class="separator">
-          <h4>OTROS PROYECTOS</h4>
-        </div>
+      <div class="cuerpo-de-maceta">
+          <!-- Invest Buttom (no sé dónde sale) -->
+          <!--<button type="button" class="button button-full button-energized" ng-if="home.projects.items.length == 0" ng-click="home.common()">
+            INVIERTA DESDE $10.000
+          </button>-->
+          <div class="row boton-a-mostrar" ng-if="home.projects.items.length == 0" ng-click="home.common()">
+            <div class="col text-center">
+              <button class="button button-energized button-full">INVIERTA DESDE $10.000</button>
+            </div>
+          </div>
+          <!-- Projects in Col 33 -->
+          <div ng-if="home.projects.items.length != 0">
+            <div class="ura" ng-repeat="ura in home.projects.items">
+              <div ng-click="home.averga(ura.proyecto_id)">
+                <div class="project-box-title">
+                  <span>{{ura.proyecto_descripcion}}</span>
+                </div>
+                <!--<a>-->
+                <div class="project-box-content">
+                  <img ng-src="{{home.imagen}}">
+                </div>
+                <!--</a>-->
+              </div>
+            </div>
+          </div>
+
       </div>
-    </div>
-    <div class = "row">
-      <div class = "col text-center">
-        <div class="project-box">
-          <div class="project-box-title">
-            <span>Holala!</span>
-          </div>
-          <div class="project-box-content" >
-            <img src="http://oxyawa.com/wordpress/wp-content/uploads/2014/10/emprendimientos-inmobiliarios-oxyawa.jpg">
-          </div>
-        </div>
-      </div>
-      <div class = "col text-center">
-        <div class="project-box">
-          <div class="project-box-title">
-            <span>Holala!</span>
-          </div>
-          <div class="project-box-content" >
-            <img src="http://oxyawa.com/wordpress/wp-content/uploads/2014/10/emprendimientos-inmobiliarios-oxyawa.jpg">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class = "row">
-      <div class = "col text-center">
-        <div class="project-box">
-          <div class="project-box-title">
-            <span>Holala!</span>
-          </div>
-          <div class="project-box-content" >
-            <img src="http://oxyawa.com/wordpress/wp-content/uploads/2014/10/emprendimientos-inmobiliarios-oxyawa.jpg">
-          </div>
-        </div>
-      </div>
-      <div class = "col text-center">
-        <div class="project-box">
-          <div class="project-box-title">
-            <span>Holala!</span>
-          </div>
-          <div class="project-box-content" >
-            <img src="http://oxyawa.com/wordpress/wp-content/uploads/2014/10/emprendimientos-inmobiliarios-oxyawa.jpg">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="separator">
-      <h4>PROPIEDADES FINANCIADAS</h4>
-    </div>
-    <div class = "row">
-      <div class = "col text-center">
-        <div class="project-box">
-          <div class="project-box-title">
-            <span>Holala!</span>
-          </div>
-          <div class="project-box-content" >
-            <img src="http://oxyawa.com/wordpress/wp-content/uploads/2014/10/emprendimientos-inmobiliarios-oxyawa.jpg">
-          </div>
-        </div>
-      </div>
-      <div class = "col text-center">
-        <div class="project-box">
-          <div class="project-box-title">
-            <span>Holala!</span>
-          </div>
-          <div class="project-box-content" >
-            <img src="http://oxyawa.com/wordpress/wp-content/uploads/2014/10/emprendimientos-inmobiliarios-oxyawa.jpg">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class = "row">
-      <div class = "col text-center">
-        <div class="project-box">
-          <div class="project-box-title">
-            <span>Holala!</span>
-          </div>
-          <div class="project-box-content" >
-            <img src="http://oxyawa.com/wordpress/wp-content/uploads/2014/10/emprendimientos-inmobiliarios-oxyawa.jpg">
-          </div>
-        </div>
-      </div>
-      <div class = "col text-center">
-        <div class="project-box">
-          <div class="project-box-title">
-            <span>Holala!</span>
-          </div>
-          <div class="project-box-content" >
-            <img src="http://oxyawa.com/wordpress/wp-content/uploads/2014/10/emprendimientos-inmobiliarios-oxyawa.jpg">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+
 </ion-content>
+<ion-footer>
+  <div class="tabs tabs-icon-only tabs-background-positive tabs-color-stable">
+    <a class="tab-item" href="#/home">
+      <i class="icon ion-home"></i>
+    </a>
+    <a class="tab-item" href="#/app/search">
+      <i class="icon ion-ios-search-strong"></i>
+    </a>
+    <a class="tab-item" href="#/app/certificados">
+      <i class="icon ion-filing"></i>
+    </a>
+    <a class="tab-item" href="#/app/buy">
+      <i class="icon ion-social-usd"></i>
+    </a>
+  </div>
+</ion-footer>
+</ion-view>

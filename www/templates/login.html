@@ -1,28 +1,57 @@
 <ion-view>
   <ion-content scroll="false">
-    <div class="row">
-      <div class="col col-99 text-center uranga" style="background-image: url(img/login.jpg);">
+      <!--<div class="row">
+        <div class="col-100 text-center">
+          <div class="list">
+            <div class="item item-image">
+              <img src="img/App2.jpg">
+            </div>
+            <label class="item item-input">
+              <input type="email" placeholder="EMAIL" ng-model="login.data.email">
+            </label>
+            <label class="item item-input">
+              <input type="password" placeholder="CONTRASEÑA" ng-model="login.data.password">
+            </label>
+            <label class="item item-input">
+              <button class="button button-block button-positive" ng-click="login.login()">
+                INICIAR SESIÓN
+              </button>
+            </label>
+            <label class="item item-input text-center">
+              <a href="#/signin">Crear cuenta</a>
+            </label>
+          </div>
+        </div>
+      </div>-->
+      <section class = "home-container">
 
-      </div>
-    </div>
-    <div class="row">
-      <div class="col col-99 text-center">
-        <form class="list list-inset">
-          <div class="item item-input-inset">
-            <label class="item-input-wrapper">
-              <input type="text" placeholder="Email" ng-model="login.data.email">
-            </label>
+        <div class = "row header">
+          <div class = "col text-center img-back">
           </div>
-          <div class="item item-input-inset">
-            <label class="item-input-wrapper">
-              <input type="password" placeholder="password" ng-model="login.data.password">
-            </label>
+        </div>
+
+        <div class = "icon-row spacer-sm">
+          <div class = "col text-center">
+            <input type="email" placeholder="Correo Electrónico" ng-model="login.data.email" ng-pattern="/[a-z0-9!#$%&'*+=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g">
           </div>
-          <button class="button button-full button-energized">
-            INICIAR SESIÓN
-          </button>
-        </form>
-      </div>
-    </div>
+        </div>
+
+        <div class = "icon-row">
+          <div class = "col text-center">
+            <input type="password" placeholder="Contraseña" ng-model="login.data.password">
+          </div>
+        </div>
+
+        <div class = "row">
+          <div class = "col text-center">
+            <button class="button button-dark" ng-click="login.login()">
+              INICIAR SESIÓN
+            </button>
+            <img src="img/_o-.png" class="spacer-xs">
+        <p><a href="#/signin">Crear una Cuenta</a></p>
+          </div>
+        </div>
+
+      </section>
   </ion-content>
 </ion-view>
