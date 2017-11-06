@@ -16,7 +16,7 @@
         Users.Data = res.data;
         $state.go('app.home');
       }, function(err){
-
+        console.log(err);
       });
     };
   }

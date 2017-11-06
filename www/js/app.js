@@ -19,19 +19,16 @@
     .state('app', {
       url: '/app',
       abstract: true,
-      templateUrl: 'templates/menu.html'
+      templateUrl: 'templates/menu.html',
+      controller: 'MenuCtrl',
+      controllerAs: 'menu'
     })
 
     .state('login', {
       url: '/login',
       templateUrl: 'templates/login.html',
       controller: 'LoginCtrl',
-      controllerAs: 'login',
-      resolve: {
-        check: function(Users){
-          Users.isLogged();
-        }
-      }
+      controllerAs: 'login'
     })
 
     .state('signin', {
@@ -48,9 +45,15 @@
       controllerAs: 'notify'
     })
 
-    .state('perfil', {
+    .state('app.perfil', {
       url: '/perfil',
-      templateUrl: 'templates/perfil.html'
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/perfil.html',
+          controller: 'PerfilCtrl',
+          controllerAs: 'perfil'
+        }
+      }
     })
 
     .state('app.home', {

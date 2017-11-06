@@ -7,14 +7,12 @@
       get: getProjects,
       save: saveDevelopers,
       update: updateDevelopers,
-      delete: deleteDevelopers
+      delete: deleteDevelopers,
+      getMensajes: getMensajes
     };
 
-    function getProjects(){
+    function getProjects(desarrollador_id){
       return $http.get(BASE_URL.base + '/desarrolladores/'+desarrollador_id+'/proyectos', {
-        params: {
-          desarrollador_id: desarrollador_id
-        },
         headers: {
           'x-access-token': window.localStorage.getItem('keyacces')
         }
@@ -35,6 +33,14 @@
 
     function deleteDevelopers(){
 
+    }
+
+    function getMensajes(desarrollador_id){
+      return $http.get(BASE_URL.base + '/desarrolladores/'+desarrollador_id+'/mensajes', {
+        headers: {
+          'x-access-token': window.localStorage.getItem('keyacces')
+        }
+      });
     }
   }
 

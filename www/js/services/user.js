@@ -7,6 +7,7 @@
       login: login,
       get: getUser,
       isLogged: isLogged,
+      logout: logout,
       Data: {}
     };
 
@@ -15,7 +16,7 @@
     }
 
     function getUser(id){
-      return $http.get(BASE_URL.base + '/users/'+id+'/desarrollador/', {
+      return $http.get(BASE_URL.base + '/users/'+id+'/desarrollador', {
         headers: {
           'x-access-token': window.localStorage.getItem('keyacces')
         }

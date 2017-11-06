@@ -1,32 +1,97 @@
 <ion-view>
-  <ion-header-bar class="bar-energized">
-    <a class="button button-clear button-icon icon ion-chevron-left"></a>
+  <ion-header-bar class="bar-dark">
+    <a class="button button-icon ion-chevron-left"></a>
     <h1 class="title">Editar Perfil</h1>
     <div class="buttons">
-      <a class="button button-clear button-icon icon ion-checkmark-round"></a>
-      <a class="button button-clear button-icon icon ion-close-round"></a>
+      <a class="button button-icon ion-checkmark-round"></a>
+      <a class="button button-icon ion-close-round"></a>
     </div>
   </ion-header-bar>
-  <ion-content has-header="true">
-    <div class="hero has-mask" style="background: rgb(246, 173, 57);">
-      <div class="content">
-        <div class="avatar" style="background-image: url('http://ionicframework.com/img/docs/siamese-dream.jpg');"></div>
-          <h4><a class="light">Cambiar foto de perfil</a></h4>
+  <ion-content class="has-header" style="background: rgb(246, 173, 57) !important;">
+    <div class="row">
+      <div class="col text-center">
+        <div class="item-avatar">
+          <img src="img/no-image.png">
+        </div>
+        <span class="title" style="color: #FFFFFF;">Cambiar foto de perfil</span>
       </div>
     </div>
-    <div class="list">
-      <label class="item item-input">
-        <input type="text" placeholder="First Name">
-      </label>
-      <div class="item item-divider" style="background: #444; color: #FFF;">
-        Información Privada
+    <div class="row">
+      <div class="col col-100 text-center">
+        <div class="list">
+          <label class="item item-icon-left">
+            <i class="icon ion-person-stalker"></i>
+            <input type="text" placeholder="{{perfil.user_data.nombre}}"
+              ng-model="perfil.user_data.nombre">
+          </label>
+          <!--<label class="item item-icon-left">
+            <i class="icon ion-android-calendar"></i>
+            <input type="text" placeholder="Nombre">
+          </label>-->
+          <label class="item item-icon-left">
+            <i class="icon ion-android-calendar"></i>
+            <input type="date" placeholder="Fecha de Nacimiento" ng-model="perfil.user_data.inicio_actividades">
+          </label>
+          <label class="item item-icon-left">
+            <i class="icon ion-transgender"></i>
+            <input type="text" placeholder="Genero" ng-model="perfil.user_data.domicilio">
+          </label>
+          <label class="item item-icon-left">
+            <i class="icon ion-ios-book"></i>
+            <input type="text" placeholder="DNI" ng-model="perfil.user_data.descripcion">
+          </label>
+          <label class="item item-icon-left">
+            <i class="icon ion-heart"></i>
+            <input type="text" placeholder="Tipo de Sociedad" ng-model="perfil.user_data.tipo_de_sociedad">
+            <!--<select ng-model="perfil.profile_user.estado_civil"
+              style="width: 100%;height: 50px;border: none;background-color:#f2f2f2;color: #444;">
+              <option ng-repeat="p in perfil.estado_civil">{{p.nombre}}</option>
+            </select>-->
+          </label>
+          <label class="item item-icon-left">
+            <i class="icon ion-ios-telephone"></i>
+            <input type="number" placeholder="Teléfono Fijo" ng-model="perfil.user_data.telefono_fijo">
+          </label>
+          <label class="item item-icon-left">
+            <i class="icon ion-iphone"> </i>
+            <input type="number" placeholder="Teléfono Móvil" ng-model="perfil.user_data.telefono_movil">
+          </label>
+          <label class="item item-icon-left">
+            <i class="icon ion-ios-at"></i>
+            <input type="text" placeholder="Web" ng-model="perfil.user_data.web">
+          </label>
+          <!--<label class="item item-icon-left">
+            <i class="icon ion-hammer"></i>
+            <input type="text" placeholder="Profesión" ng-model="perfil.profile_user.profesion">
+            <select ng-model="perfil.profile_user.profesion"
+              style="width: 100%;height: 50px;border: none;background-color:#f2f2f2;color: #444;">
+              <option ng-repeat="p in perfil.profesiones">{{p.nombre}}</option>
+            </select>
+          </label>-->
+        <!--  <label class="item item-icon-left">
+            <i class="icon ion-cash"></i>
+            <input type="number" placeholder="Ingreso Mensual" ng-model="perfil.profile_user.ingreso_mensual">
+          </label>-->
+          <label class="item item-icon-left">
+            <i class="icon ion-more"></i>
+            <input type="number" placeholder="Cuit" ng-model="perfil.profile_user.cuit">
+          </label>
+          <!--<label class="item item-icon-left">
+            <i class="icon ion-ios-bookmarks"></i>
+            <input type="number" placeholder="Politicamente Expuesto" ng-model="perfil.profile_user.es_politicamente_expuesto">
+            <select ng-model="perfil.profile_user.es_politicamente_expuesto"
+              style="width: 100%;height: 50px;border: none;background-color: #f2f2f2;color: #444;">
+              <option value="1">SI</option>
+              <option value="0">NO</option>
+            </select>
+          </label>-->
+          <label class="item item-icon-left">
+            <button class="button button-dark" ng-click="perfil.save_profile()">
+              GUARDAR
+            </button>
+          </label>
+        </div>
       </div>
-      <label class="item item-input">
-        <input type="text" placeholder="First Name">
-      </label>
-      <label class="item item-input">
-        <input type="text" placeholder="First Name">
-      </label>
     </div>
   </ion-content>
 </ion-view>
