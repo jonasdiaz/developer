@@ -34,11 +34,11 @@
           </label>
           <label class="item item-icon-left">
             <i class="icon ion-transgender"></i>
-            <input type="text" placeholder="Genero" ng-model="perfil.user_data.domicilio">
+            <input type="text" placeholder="Domicilio" ng-model="perfil.user_data.domicilio">
           </label>
           <label class="item item-icon-left">
             <i class="icon ion-ios-book"></i>
-            <input type="text" placeholder="DNI" ng-model="perfil.user_data.descripcion">
+            <input type="text" placeholder="Descripcion" ng-model="perfil.user_data.descripcion">
           </label>
           <label class="item item-icon-left">
             <i class="icon ion-heart"></i>
@@ -50,11 +50,11 @@
           </label>
           <label class="item item-icon-left">
             <i class="icon ion-ios-telephone"></i>
-            <input type="number" placeholder="Teléfono Fijo" ng-model="perfil.user_data.telefono_fijo">
+            <input type="text" placeholder="Teléfono Fijo" ng-model="perfil.user_data.telefono_1">
           </label>
           <label class="item item-icon-left">
             <i class="icon ion-iphone"> </i>
-            <input type="number" placeholder="Teléfono Móvil" ng-model="perfil.user_data.telefono_movil">
+            <input type="text" placeholder="Teléfono Móvil" ng-model="perfil.user_data.telefono_2">
           </label>
           <label class="item item-icon-left">
             <i class="icon ion-ios-at"></i>
@@ -86,7 +86,7 @@
             </select>
           </label>-->
           <label class="item item-icon-left">
-            <button class="button button-dark" ng-click="perfil.save_profile()">
+            <button class="button button-dark" ng-click="perfil.editar_perfil()">
               GUARDAR
             </button>
           </label>

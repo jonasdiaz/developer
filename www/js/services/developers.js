@@ -27,8 +27,12 @@
       });
     }
 
-    function updateDevelopers(){
-      return $http.put(BASE_URL.base + '/desarrolladores');
+    function updateDevelopers(developer_id, data){
+      return $http.put(BASE_URL.base + '/desarrolladores/'+developer_id, data, {
+        headers: {
+          'x-access-token': window.localStorage.getItem('keyacces')
+        }
+      });
     }
 
     function deleteDevelopers(){
